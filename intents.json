@@ -1,0 +1,24 @@
+{
+    "greet":{
+        "patterns":[
+            "(?i)hi|hello|hey( there)?",
+            "(?i)good (morning|afternoon|evening)"
+        ],
+        "responses":[
+            "Hi {name}! Ready to stripe it down the fairway?",
+            "Hello {name}! How's the driver feeling today?"
+        ]
+    },
+    "farewell":{
+        "patterns":[
+            "(?i)bye|goodbye|quit|exit",
+            "(?i)see you later|catch you later"
+        ],
+        "responses":[
+            "Goodbye {name}! Keep your head down and swing smooth!",
+            "See you later {name}! May your drives be long and straight!",
+            "Fairways and greens, {name}! 👋",
+            "Catch you next practice, {name}."
+        ]
+    }
+}

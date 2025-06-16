@@ -1,0 +1,4 @@
+nltk==3.9.1
+regex==2024.11.6
+pytest==8.4.0
+ipykernel==6.29.5
