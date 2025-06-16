@@ -2,8 +2,11 @@ import json, re
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-def loadIntents(path: str| Path) -> Tuple[Dict[re.Pattern, str], Dict[str, List[str]]]:
-    with open(path, encoding="utf-8") as file:
+HERE = Path(__file__).resolve().parent 
+
+def loadIntents(path: str| Path=HERE/"intents.json") -> Tuple[Dict[re.Pattern, str], Dict[str, List[str]]]:
+    path = Path(path).expanduser().resolve()
+    with path.open(encoding="utf-8") as file:
         data = json.load(file)
     pat2intent, intent2resp = {}, {}
     for intent, blob in data.items():
